@@ -13,7 +13,7 @@ module.exports = {
         "nombre": "Andres",
         "apellido": "Borbor"
       }
-    ])
+    ], {})
   },
 
   async down (queryInterface, Sequelize) {

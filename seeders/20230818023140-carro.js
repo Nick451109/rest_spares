@@ -23,7 +23,7 @@ module.exports = {
       "persona_idpersona": 2,
      }
 
-   ])
+   ],{})
   },
 
   async down (queryInterface, Sequelize) {

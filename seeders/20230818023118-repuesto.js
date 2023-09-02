@@ -4,7 +4,7 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
 
-    await queryInterface.bulkInsert('carro', [
+    await queryInterface.bulkInsert('repuesto', [
 
       {
         "descripcion": "amortiguadores"
@@ -13,7 +13,7 @@ module.exports = {
         "descripcion": "bujias"
       }
 
-    ])
+    ],{})
   },
 
   async down(queryInterface, Sequelize) {
