@@ -6,16 +6,16 @@ module.exports = {
     await queryInterface.bulkInsert('mantenimiento', [
 
       {
-        "encargado":7,
-        "repuesto": 3, 
+        "encargado":3,
+        "repuesto": 1, 
         "servicio": "cambio de repuesto",
-        "carro_idCarro":7
+        "carro_idCarro":3
       },
       {
-        "encargado":8, 
-        "repuesto": 4, 
+        "encargado":4, 
+        "repuesto": 2, 
         "servicio": "cambio de repuesto",
-        "carro_idCarro":8
+        "carro_idCarro":4
       }
       
      ],{})

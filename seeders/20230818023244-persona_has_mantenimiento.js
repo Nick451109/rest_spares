@@ -6,11 +6,11 @@ module.exports = {
     await queryInterface.bulkInsert('persona_has_mantenimiento', [
 
       {
-        "persona_idpersona": 7,
+        "persona_idpersona": 3,
         "mantenimiento_idmantenimiento": 3
       },
       {
-        "persona_idpersona": 8,
+        "persona_idpersona": 4,
         "mantenimiento_idmantenimiento": 4
       }
   

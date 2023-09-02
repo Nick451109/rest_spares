@@ -6,12 +6,12 @@ module.exports = {
     await queryInterface.bulkInsert('carro_has_repuesto', [
 
       {
-        "carro_idCarro": 7,
-        "repuesto_idrepuesto": 3
+        "carro_idCarro": 3,
+        "repuesto_idrepuesto": 1
       },
       {
-        "carro_idCarro": 8,
-        "repuesto_idrepuesto": 4
+        "carro_idCarro": 4,
+        "repuesto_idrepuesto": 2
       }
   
      ],{})
