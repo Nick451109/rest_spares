@@ -5,8 +5,19 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('carro', [
 
-      {}
-  
+      {
+        "encargado":3,
+        "repuesto": 1, 
+        "servicio": "cambio de repuesto",
+        "carro_idCarro":1
+      },
+      {
+        "encargado":4, 
+        "repuesto": 2, 
+        "servicio": "cambio de repuesto",
+        "carro_idCarro":1
+      }
+      
      ],{})
   },
 

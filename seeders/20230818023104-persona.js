@@ -12,6 +12,14 @@ module.exports = {
       {
         "nombre": "Andres",
         "apellido": "Borbor"
+      },
+      {
+        "nombre": "Alex",
+        "apellido": "Alvear"
+      },
+      {
+        "nombre": "Mario",
+        "apellido": "Funichi"
       }
     ], {})
   },
