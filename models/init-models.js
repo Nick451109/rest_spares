@@ -26,10 +26,14 @@ function initModels(sequelize) {
   mantenimiento.hasMany(persona_has_mantenimiento, { as: "persona_has_mantenimientos", foreignKey: "mantenimiento_idmantenimiento"});
   carro.belongsTo(persona, { as: "persona_idpersona_persona", foreignKey: "persona_idpersona"});
   persona.hasMany(carro, { as: "carros", foreignKey: "persona_idpersona"});
+  mantenimiento.belongsTo(persona, { as: "encargado_persona", foreignKey: "encargado"});
+  persona.hasMany(mantenimiento, { as: "mantenimientos", foreignKey: "encargado"});
   persona_has_mantenimiento.belongsTo(persona, { as: "persona_idpersona_persona", foreignKey: "persona_idpersona"});
   persona.hasMany(persona_has_mantenimiento, { as: "persona_has_mantenimientos", foreignKey: "persona_idpersona"});
   carro_has_repuesto.belongsTo(repuesto, { as: "repuesto_idrepuesto_repuesto", foreignKey: "repuesto_idrepuesto"});
   repuesto.hasMany(carro_has_repuesto, { as: "carro_has_repuestos", foreignKey: "repuesto_idrepuesto"});
+  mantenimiento.belongsTo(repuesto, { as: "repuesto_repuesto", foreignKey: "repuesto"});
+  repuesto.hasMany(mantenimiento, { as: "mantenimientos", foreignKey: "repuesto"});
 
   return {
     carro,

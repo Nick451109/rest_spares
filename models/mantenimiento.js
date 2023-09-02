@@ -7,17 +7,21 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       primaryKey: true
     },
-    carro: {
-      type: DataTypes.STRING(45),
-      allowNull: true
-    },
     encargado: {
-      type: DataTypes.STRING(45),
-      allowNull: true
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'persona',
+        key: 'idpersona'
+      }
     },
     repuesto: {
-      type: DataTypes.STRING(45),
-      allowNull: true
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'repuesto',
+        key: 'idrepuesto'
+      }
     },
     servicio: {
       type: DataTypes.STRING(45),
@@ -49,6 +53,20 @@ module.exports = function(sequelize, DataTypes) {
         using: "BTREE",
         fields: [
           { name: "carro_idCarro" },
+        ]
+      },
+      {
+        name: "fk_mantenimiento_encargado_idpersona",
+        using: "BTREE",
+        fields: [
+          { name: "encargado" },
+        ]
+      },
+      {
+        name: "fk_mantenimiento_repuesto_idrepuesto",
+        using: "BTREE",
+        fields: [
+          { name: "repuesto" },
         ]
       },
     ]
