@@ -16,7 +16,8 @@ var usersRouter = require('./routes/users');
 
 /* CARGA DEL MIDDLEWARE authenticateJWT */
 var authenticateJWT = require('./middleware/auth');
-
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger_output.json')
 var app = express();
 
 //referencia al manejador de rutas
@@ -39,6 +40,8 @@ app.use('/users', usersRouter);
 app.use('/rest/carro', carroRouter);
 app.use('/rest/persona', personaRouter);
 app.use('/rest/repuesto',authenticateJWT, repuestoRouter);
+/* CONFIGURACIÓN DE LA RUTA A LA DOCUMENTACIÓN */
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 /* USE LA FUNCIÓN authenticateJWT */
 //app.use('/rest/libro', authenticateJWT, carroRouter);
 
