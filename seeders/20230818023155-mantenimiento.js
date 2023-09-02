@@ -3,19 +3,19 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('carro', [
+    await queryInterface.bulkInsert('mantenimiento', [
 
       {
-        "encargado":3,
-        "repuesto": 1, 
+        "encargado":7,
+        "repuesto": 3, 
         "servicio": "cambio de repuesto",
-        "carro_idCarro":1
+        "carro_idCarro":7
       },
       {
-        "encargado":4, 
-        "repuesto": 2, 
+        "encargado":8, 
+        "repuesto": 4, 
         "servicio": "cambio de repuesto",
-        "carro_idCarro":1
+        "carro_idCarro":8
       }
       
      ],{})
